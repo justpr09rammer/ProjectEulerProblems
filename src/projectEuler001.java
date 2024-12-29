@@ -16,5 +16,6 @@ public class projectEuler001 {
             sum2 += b;
         }
         System.out.println(sum1 + sum2);
+        System.out.println("revan");
     }
 }
