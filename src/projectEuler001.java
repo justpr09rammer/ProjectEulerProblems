@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class projectEuler001 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int a = 0, b = 0, sum1 = 0, sum2 = 0, target = scanner.nextInt();
+        int a = 0, b = 0, sum1 = 0, sum2 = 0, target = 1000;
         while (a + 3 < target){
             a += 3;
             sum1 += a;
@@ -16,6 +16,5 @@ public class projectEuler001 {
             sum2 += b;
         }
         System.out.println(sum1 + sum2);
-        System.out.println("revan");
     }
 }
