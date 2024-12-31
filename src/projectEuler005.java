@@ -4,7 +4,7 @@ public class projectEuler005 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         long ans = 1;
-        long target = scanner.nextLong();
+        long target = 20;
         for (long i = 1; i <= target; i ++){
             ans = LCM(ans, i);
         }
