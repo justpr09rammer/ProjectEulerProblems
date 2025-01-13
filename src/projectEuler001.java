@@ -17,4 +17,5 @@ public class projectEuler001 {
         }
         System.out.println(sum1 + sum2);
     }
+
 }

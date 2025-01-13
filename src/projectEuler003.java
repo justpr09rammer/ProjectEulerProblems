@@ -1,14 +1,15 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class projectEuler003 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        long target = 600851475143L;
+        largestPrimeFactor(13195);
+    }
+    public static void largestPrimeFactor(long number){
         long maxx = -1;
-        for (long i = 2; i <= target; i++) {
-            while (target % i == 0) {
-                target /= i;
-                maxx = i;
+        for (long i = 2; i <= number; i ++){
+            while (number % i == 0){
+                number /= i;
+                maxx = Math.max(maxx, i);
             }
         }
         System.out.println(maxx);
