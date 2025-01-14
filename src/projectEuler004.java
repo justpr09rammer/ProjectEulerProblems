@@ -1,8 +1,13 @@
 public class projectEuler004 {
     public static void main(String[] args) {
+        largestPalindromeProduct(3);
+    }
+    public static void largestPalindromeProduct(long n) {
         long maxx = -1;
-        for (long i = 999; i >= 100; i--) {
-            for (long j = 999; j >= 100; j--) {
+        long upper = (long) (Math.pow(10,n) - 1);
+        long lower = (long) (Math.pow(10,n - 1));
+        for (long i = upper; i >= lower; i--) {
+            for (long j = upper; j >= lower; j--) {
                 long multiplication = i * j;
                 StringBuilder s = new StringBuilder();
                 s.append(multiplication);
@@ -11,7 +16,6 @@ public class projectEuler004 {
                         maxx = multiplication;
                     }
                 }
-
             }
         }
         System.out.println(maxx);
