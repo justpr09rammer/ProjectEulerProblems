@@ -2,15 +2,14 @@ import java.util.Scanner;
 
 public class projectEuler006 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        long n = 100;
-        long sum1 = n * (n + 1) / 2;
-        sum1 *= sum1;
+        sumSquareDifference(100);
+    }
+    public static void sumSquareDifference(long n){
+        long sum1 = (long) Math.pow((n * (n + 1)) / 2, 2);
         long sum2 = 0;
-        for (long i = 1; i <= n; i ++){
-            sum2 += (i * i);
+        for (long i = 1; i <= n; i++) {
+            sum2 += i * i;
         }
         System.out.println(sum1 - sum2);
-
     }
 }
