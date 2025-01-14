@@ -6,23 +6,20 @@ import java.util.Set;
 
 public class projectEuler002 {
     public static void main(String[] args){
-        Scanner scanner = new Scanner(System.in);
-        int[] dp = new int[100000];
+        fiboEvenSum(34);
+    }
+    public static void fiboEvenSum(int n){
         int sum = 0;
-        dp[0] = 1;
-        dp[1] = 1;
-        for(int i = 2; i < dp.length; i++){
-            dp[i] = dp[i-1] + dp[i-2];
-            if (dp[i] < 4000000){
-
-                if (dp[i] % 2 == 0){
-                    sum += dp[i];
-                }
+        int first = 1;
+        int second = 1;
+        while (second <= n){
+            if (second % 2 == 0){
+                sum += second;
             }
-            else break;
+            int temp = second;
+            second = second + first;
+            first = temp;
         }
         System.out.println(sum);
     }
-
-
 }
