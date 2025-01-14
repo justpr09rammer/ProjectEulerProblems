@@ -2,27 +2,24 @@ import java.util.Scanner;
 
 public class projectEuler005 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        findSmallestMultiple(7);
+    }
+    public static void findSmallestMultiple(long target) {
         long ans = 1;
-        long target = 20;
-        for (long i = 1; i <= target; i ++){
+        for (long i = 1; i <= target; i++) {
             ans = LCM(ans, i);
         }
         System.out.println(ans);
     }
     public static long GCD(long a, long b) {
-        if(b == 0){
+        if (b == 0) {
             return a;
         }
-        if(a == 0){
-            return b;
-        }
-        if(a > b){
-            return GCD(a % b, b);
-        }
-        return GCD(a, b % a);
+        return GCD(b, a % b);
     }
+
     public static long LCM(long a, long b) {
         return a * b / GCD(a, b);
     }
+
 }
