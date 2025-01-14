@@ -1,32 +1,41 @@
 import java.util.HashSet;
 import java.util.Set;
+import java.util.HashSet;
+import java.util.Set;
 
 public class projectEuler007 {
     public static void main(String[] args) {
+        System.out.println(nthPrime(10001));
+    }
+
+    public static long nthPrime(long size) {
         Set<Long> set = new HashSet<>();
         set.add(2L);
         set.add(3L);
-        long size = 10001;
         long temp = 2;
         long ans = -1;
-        for (long i = 5; i <= 999999999; i ++){
+
+        for (long i = 5; i <= 999999999; i++) {
             boolean isPrime = true;
-            for(long element : set){
-                if (i % element == 0){
+
+            for (long element : set) {
+                if (i % element == 0) {
                     isPrime = false;
                     break;
                 }
             }
-            if(isPrime){
+
+            if (isPrime) {
                 set.add(i);
-                if (temp != size){
-                    temp ++;
+                if (temp != size) {
+                    temp++;
                     ans = i;
+                } else {
+                    break;
                 }
-                else break;
             }
         }
-        System.out.println(ans);
 
+        return ans;
     }
 }
