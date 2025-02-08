@@ -17,28 +17,28 @@ public class projectEuler008 {
         int count = 0;
         long maxProduct = -1;
         long currentProduct = 1;
-
-        while (right < length) {
-            if (array[right] == 0) {
-                left = right + 1;
-                count = 0;
-                currentProduct = 1;
-                right ++;
-            } else {
-                if (count == n) {
-                    maxProduct = Math.max(maxProduct, currentProduct);
-                    currentProduct /= array[left];
-                    left += 1;
-                    count -= 1;
-                }
-                else if (count < n) {
-                    currentProduct *= array[right];
-                    count++;
-                    right ++;
-                }
-            }
-
-        }
+//
+//        while (right < length) {
+//            if (array[right] == 0) {
+//                left = right + 1;
+//                count = 0;
+//                currentProduct = 1;
+//                right ++;
+//            } else {
+//                if (count == n) {
+//                    maxProduct = Math.max(maxProduct, currentProduct);
+//                    currentProduct /= array[left];
+//                    left += 1;
+//                    count -= 1;
+//                }
+//                else if (count < n) {
+//                    currentProduct *= array[right];
+//                    count++;
+//                    right ++;
+//                }
+//            }
+//
+//        }
         return Math.max(maxProduct, currentProduct);
     }
 }
